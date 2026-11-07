@@ -1,10 +1,21 @@
 # Changelog
 
-## 1.0.0 — 2026-11-07
+## GMS Doze Enabler 1.0.0
 
-- First release of GMS Doze Enabler as an independent project.
-- Android API 23+ support, including modern Android and Samsung layouts.
-- Dynamic-partition XML discovery for `system_ext`, `product`, `vendor`, `odm`, `oem`, `system_dlkm`, and `apex`.
-- KernelSU, Magisk, and APatch installer support.
-- Multi-user boot handling and current `cmd deviceidle` integration.
-- Safer GMS-only cache cleanup.
+### First independent release
+
+GMS Doze Enabler is released as a new project focused on keeping Google Play services eligible for Android Doze across current vendor layouts.
+
+### Changes
+
+- Renamed and reorganized as an independent project.
+- Added support for Samsung and dynamic `system_ext`, `product`, `vendor`, `odm`, `oem`, `system_dlkm`, and `apex` paths.
+- Added current `cmd deviceidle` handling with a legacy fallback.
+- Added multi-user boot handling.
+- Added KernelSU, Magisk, and APatch detection.
+- Added GMS-only stale-cache cleanup.
+- Added a `gmsdoze` status command.
+
+### Validation
+
+Validated on a Samsung Galaxy S23 (SM-S911B) using KernelSU with Magic Mount-rs. The release ZIP was installed from the KernelSU Manager and the mounted Samsung XML and runtime `deviceidle` whitelist were checked after reboot.
