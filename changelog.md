@@ -6,6 +6,8 @@
 
 GMS Doze Enabler is released as a new project focused on keeping Google Play services eligible for Android Doze across current vendor layouts.
 
+> **KernelSU users:** an external system-mount metamodule (Magic Mount-rs, meta-overlayfs, or Hybrid Mount) is required. The module cannot mount its `system/` overlay by itself.
+
 ### Changes
 
 - Renamed and reorganized as an independent project.

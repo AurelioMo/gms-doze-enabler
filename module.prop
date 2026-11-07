@@ -3,5 +3,5 @@ name=GMS Doze Enabler
 version=1.0.0
 versionCode=100
 author=AurelioMo
-description=Restores Android Doze controls for Google Play services on modern rooted devices
+description=Restores Android Doze controls for Google Play services; KernelSU requires an external mount metamodule
 updateJson=https://raw.githubusercontent.com/AurelioMo/gms-doze-enabler/main/module.json

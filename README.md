@@ -4,6 +4,8 @@ Restore Android's battery optimization controls for Google Play services on root
 
 GMS Doze Enabler removes Google Play services (`com.google.android.gms`) from static Doze and data-saver exemptions, removes its runtime `deviceidle` whitelist entry at boot, and handles the dynamic partition layout used by current Android releases and Samsung One UI. It is a systemless KernelSU, Magisk, and APatch module.
 
+> **KernelSU requirement:** KernelSU users must install a separate system-mount metamodule, such as **Magic Mount-rs**, **meta-overlayfs**, or **Hybrid Mount**. Without one, KernelSU can show this module as installed while its `system/` overlay is not applied.
+
 ## Download
 
 [Download GMS Doze Enabler 1.0.0 from Releases](https://github.com/AurelioMo/gms-doze-enabler/releases/latest). Download `gms-doze-enabler-v1.0.0.zip` from the release assets. The repository source archive is not the installable module.
@@ -25,7 +27,7 @@ The module is vendor-oriented rather than model-specific. It searches the mounte
 ## Installation
 
 1. If you previously used **Universal GMS Doze**, disable or uninstall that older module first.
-2. KernelSU users: install and activate one metamodule before installing GMS Doze Enabler. Only one metamodule should be active.
+2. KernelSU users: install and activate one external metamodule (**Magic Mount-rs**, **meta-overlayfs**, or **Hybrid Mount**) before installing GMS Doze Enabler. Only one metamodule should be active.
 3. Install the ZIP from the root manager's module screen.
 4. Reboot using the manager's supported reboot flow so the system overlay is mounted.
 5. Verify the runtime state:
