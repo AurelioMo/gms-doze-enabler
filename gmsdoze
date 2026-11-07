@@ -1,0 +1,11 @@
+#!/system/bin/sh
+GMS='com.google.android.gms'
+if [ "$(id -u)" != 0 ]; then
+  echo ' Superuser (su) rights is needed!'
+  exit 1
+fi
+if cmd deviceidle whitelist 2>/dev/null | grep -Fq "$GMS"; then
+  echo ' Google Play services is Not Optimized.'
+else
+  echo ' Google Play services is Optimized.'
+fi
